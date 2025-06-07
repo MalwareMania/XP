@@ -156,7 +156,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp23</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>E:\XP\XP\Other\cpr\include;E:\XP\XP\Other;E:\XP\XP\Main;E:\XP\XP\Other\Luau\VM\src;E:\XP\XP\Other\Luau\VM\include;E:\XP\XP\Other\Luau\Compiler\include;E:\XP\XP\Other\Luau\Ast\include;E:\XP\XP\Other\Luau\Common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\XP\Other\Luau\VM\src;$(SolutionDir)\XP\Other;$(SolutionDir)\XP\Main;$(SolutionDir)\XP\Other\Luau\VM\include;$(SolutionDir)\XP\Other\Luau\Compiler\include;$(SolutionDir)\XP\Other\Luau\Ast\include;$(SolutionDir)\XP\Other\Luau\Common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
