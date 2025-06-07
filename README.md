@@ -7,4 +7,4 @@ UNC - `0`
 
 # 📡 Sending Scripts from C# 
 
-Currently we don't have a communication
+Currently we don't have a communication method.
