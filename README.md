@@ -8,3 +8,6 @@ UNC - `0` ( Only loadstring added )
 # 📡 Sending Scripts from C# 
 
 Currently we don't have a communication method.
+
+
+# DOWNLOAD THE SOURCE FROM RELEASE THIS ONE HAS ERRORS
