@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{703cddf8-4559-414e-a5fa-c36bea2fef96}</ProjectGuid>
+    <RootNamespace>XP</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)ZABUILD\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)ZABUILD\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)ZABUILD\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)ZABUILD\</OutDir>
+    <TargetName>XP</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;XP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>E:\XP\XP\Other\Luau\VM\src;E:\XP\XP\Other\Luau\VM\include;E:\XP\XP\Other\Luau\Compiler\include;E:\XP\XP\Other\Luau\Ast\include;E:\XP\XP\Other\Luau\Common\include;E:\XP\XP\Other;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>E:\XP\XP\Other\Luau\VM\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;XP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>E:\XP\XP\Other\Luau\VM\src;E:\XP\XP\Other\Luau\VM\include;E:\XP\XP\Other\Luau\Compiler\include;E:\XP\XP\Other\Luau\Ast\include;E:\XP\XP\Other\Luau\Common\include;E:\XP\XP\Other;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>E:\XP\XP\Other\Luau\VM\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;XP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>E:\XP\XP\Other\Luau\VM\src;E:\XP\XP\Other\Luau\VM\include;E:\XP\XP\Other\Luau\Compiler\include;E:\XP\XP\Other\Luau\Ast\include;E:\XP\XP\Other\Luau\Common\include;E:\XP\XP\Other;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>E:\XP\XP\Other\Luau\VM\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;XP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>E:\XP\XP\Other\cpr\include;E:\XP\XP\Other;E:\XP\XP\Main;E:\XP\XP\Other\Luau\VM\src;E:\XP\XP\Other\Luau\VM\include;E:\XP\XP\Other\Luau\Compiler\include;E:\XP\XP\Other\Luau\Ast\include;E:\XP\XP\Other\Luau\Common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>E:\XP\XP\Other\Luau\VM\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Wldap32.lib;Normaliz.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="Main\Environment\Environment.cpp" />
+    <ClCompile Include="Main\Execution\Execution.cpp" />
+    <ClCompile Include="Main\TaskScheduler\TaskScheduler.cpp" />
+    <ClCompile Include="Other\Luau\Ast\src\Ast.cpp" />
+    <ClCompile Include="Other\Luau\Ast\src\Confusables.cpp" />
+    <ClCompile Include="Other\Luau\Ast\src\Lexer.cpp" />
+    <ClCompile Include="Other\Luau\Ast\src\Location.cpp" />
+    <ClCompile Include="Other\Luau\Ast\src\Parser.cpp" />
+    <ClCompile Include="Other\Luau\Ast\src\StringUtils.cpp" />
+    <ClCompile Include="Other\Luau\Ast\src\TimeTrace.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\BuiltinFolding.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\Builtins.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\BytecodeBuilder.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\Compiler.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\ConstantFolding.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\CostModel.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\lcode.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\TableShape.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\Types.cpp" />
+    <ClCompile Include="Other\Luau\Compiler\src\ValueTracking.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lapi.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\laux.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lbaselib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lbitlib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lbuffer.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lbuflib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lbuiltins.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lcorolib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\ldblib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\ldebug.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\ldo.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lfunc.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lgc.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lgcdebug.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\linit.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lmathlib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lmem.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lnumprint.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lobject.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\loslib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lperf.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lstate.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lstring.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lstrlib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\ltable.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\ltablib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\ltm.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\ludata.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lutf8lib.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lvmexecute.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lvmload.cpp" />
+    <ClCompile Include="Other\Luau\VM\src\lvmutils.cpp" />
+    <ClCompile Include="Other\oxorany\oxorany.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main\Environment\Environment.hpp" />
+    <ClInclude Include="Main\Execution\Execution.hpp" />
+    <ClInclude Include="Main\Globals.hpp" />
+    <ClInclude Include="Main\Offsets\EncryptionManager.hpp" />
+    <ClInclude Include="Main\Offsets\Offsets.hpp" />
+    <ClInclude Include="Main\Offsets\Shuffles.hpp" />
+    <ClInclude Include="Main\TaskScheduler\TaskScheduler.hpp" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\Ast.h" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\Confusables.h" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\Lexer.h" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\Location.h" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\ParseOptions.h" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\Parser.h" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\ParseResult.h" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\StringUtils.h" />
+    <ClInclude Include="Other\Luau\Ast\include\Luau\TimeTrace.h" />
+    <ClInclude Include="Other\Luau\Common\include\Luau\Bytecode.h" />
+    <ClInclude Include="Other\Luau\Common\include\Luau\BytecodeUtils.h" />
+    <ClInclude Include="Other\Luau\Common\include\Luau\Common.h" />
+    <ClInclude Include="Other\Luau\Common\include\Luau\DenseHash.h" />
+    <ClInclude Include="Other\Luau\Common\include\Luau\ExperimentalFlags.h" />
+    <ClInclude Include="Other\Luau\Common\include\Luau\Variant.h" />
+    <ClInclude Include="Other\Luau\Common\include\Luau\VecDeque.h" />
+    <ClInclude Include="Other\Luau\Compiler\include\luacode.h" />
+    <ClInclude Include="Other\Luau\Compiler\include\Luau\BytecodeBuilder.h" />
+    <ClInclude Include="Other\Luau\Compiler\include\Luau\Compiler.h" />
+    <ClInclude Include="Other\Luau\Compiler\src\BuiltinFolding.h" />
+    <ClInclude Include="Other\Luau\Compiler\src\Builtins.h" />
+    <ClInclude Include="Other\Luau\Compiler\src\ConstantFolding.h" />
+    <ClInclude Include="Other\Luau\Compiler\src\CostModel.h" />
+    <ClInclude Include="Other\Luau\Compiler\src\TableShape.h" />
+    <ClInclude Include="Other\Luau\Compiler\src\Types.h" />
+    <ClInclude Include="Other\Luau\Compiler\src\ValueTracking.h" />
+    <ClInclude Include="Other\Luau\VM\include\lua.h" />
+    <ClInclude Include="Other\Luau\VM\include\luaconf.h" />
+    <ClInclude Include="Other\Luau\VM\include\lualib.h" />
+    <ClInclude Include="Other\Luau\VM\src\lapi.h" />
+    <ClInclude Include="Other\Luau\VM\src\lbuffer.h" />
+    <ClInclude Include="Other\Luau\VM\src\lbuiltins.h" />
+    <ClInclude Include="Other\Luau\VM\src\lbytecode.h" />
+    <ClInclude Include="Other\Luau\VM\src\lcommon.h" />
+    <ClInclude Include="Other\Luau\VM\src\ldebug.h" />
+    <ClInclude Include="Other\Luau\VM\src\ldo.h" />
+    <ClInclude Include="Other\Luau\VM\src\lfunc.h" />
+    <ClInclude Include="Other\Luau\VM\src\lgc.h" />
+    <ClInclude Include="Other\Luau\VM\src\lmem.h" />
+    <ClInclude Include="Other\Luau\VM\src\lnumutils.h" />
+    <ClInclude Include="Other\Luau\VM\src\lobject.h" />
+    <ClInclude Include="Other\Luau\VM\src\lstate.h" />
+    <ClInclude Include="Other\Luau\VM\src\lstring.h" />
+    <ClInclude Include="Other\Luau\VM\src\ltable.h" />
+    <ClInclude Include="Other\Luau\VM\src\ltm.h" />
+    <ClInclude Include="Other\Luau\VM\src\ludata.h" />
+    <ClInclude Include="Other\Luau\VM\src\lvm.h" />
+    <ClInclude Include="Other\nlohmann\nlohmann.hpp" />
+    <ClInclude Include="Other\oxorany\oxorany.h" />
+    <ClInclude Include="Other\oxorany\oxorany_include.h" />
+    <ClInclude Include="Other\zstd\include\zstd\xxhash.h" />
+    <ClInclude Include="Other\zstd\include\zstd\zstd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Other\zstd\lib\zstd_static.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
