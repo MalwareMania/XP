@@ -5,16 +5,23 @@
 
 #define REBASE(x)(x + (uintptr_t)GetModuleHandleA(NULL))
 
+inline const uintptr_t HyperionBase = (uintptr_t)GetModuleHandle("RobloxPlayerBeta.dll");
+#define Hyperion(x) (HyperionBase + (x))
+
+struct SignalT;
 struct lua_State;
+struct Proto;
 
 namespace Offsets
 {
-	const uintptr_t Print = REBASE(0x155C160);
-	const uintptr_t RawScheduler = REBASE(0x67E7748);
-	const uintptr_t TaskDefer = REBASE(0xFD1E80); // Optional
-	const uintptr_t DecryptState = REBASE(0xB27560);
-	const uintptr_t GetGlobalState = REBASE(0xDA5F30);
-	const uintptr_t LuaVMLoad = REBASE(0xB2A640);
+	const uintptr_t Print = REBASE(0x1563AC0);
+	const uintptr_t RawScheduler = REBASE(0x681CA18);
+	const uintptr_t TaskDefer = REBASE(0xFE5D80);
+	const uintptr_t DecryptState = REBASE(0xB44700);
+	const uintptr_t GetGlobalState = REBASE(0xDBD570);
+	const uintptr_t LuaVMLoad = REBASE(0xB47780);
+
+        const uintptr_t BitMap = Hyperion(0x2A6938); // .
 
 	namespace LuaState
 	{
@@ -24,7 +31,7 @@ namespace Offsets
 
 	namespace DataModel
 	{
-		const uintptr_t FakeDataModelPointer = REBASE(0x6726238);
+		const uintptr_t FakeDataModelPointer = REBASE(0x675AA38);
 		const uintptr_t FakeDataModelToDataModel = 0x1B8;
 		const uintptr_t Children = 0x80;
 		const uintptr_t ScriptContext = 0x3B0;
